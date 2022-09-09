@@ -1,9 +1,9 @@
 {
-  "name": "UserBadge",
-  "id": "10074075004744806001",
+  "name": "Kanban",
+  "id": "1149872275457395522",
   "api": "1.0.0",
   "editorType": ["figma", "figjam"],
-  "permissions": ["currentuser"],
+  "permissions": ["currentuser", "activeusers"],
   "containsWidget": true,
   "main": "dist/code.js",
   "widgetApi": "1.0.0"
