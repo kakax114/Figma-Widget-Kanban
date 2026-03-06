@@ -162,7 +162,7 @@ const App = () => {
   const [bgImage, setBgImage]   = useSyncedState('bgImage', '')
   const [titleColor, setTitleColor] = useSyncedState('titleColor', '#FFFFFF')
   const [widgetSize, setWidgetSize] = useSyncedState<'S' | 'M' | 'L' | 'XL'>('widgetSize', 'M')
-  const [darkMode, setDarkMode] = useSyncedState('darkMode', false)
+  const [darkMode, setDarkMode] = useSyncedState('darkMode', true)
 
   const s = scaleMap[widgetSize] ?? 1
   const t = darkMode ? DARK : LIGHT
