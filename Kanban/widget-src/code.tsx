@@ -288,7 +288,7 @@ const App = () => {
         blur: 40,
         spread: 0,
       }}
-      fill={bgType === 'color' ? bgColor : { type: 'image', src: bgImage }}
+      fill={bgType === 'color' || !bgImage ? bgColor : { type: 'image', src: bgImage }}
     >
       <Input
         fill={titleColor}
