@@ -158,7 +158,7 @@ const App = () => {
 
   const [bgColor, setBgColor]   = useSyncedState('bgColor', '#DBEAFE')
   const [bgType, setBgType]     = useSyncedState<'color' | 'image'>('bgType', 'image')
-  const [bgImage, setBgImage]   = useSyncedState('bgImage', '')
+  const [bgImage, setBgImage]   = useSyncedState('background', bgImages[0])
   const [titleColor, setTitleColor] = useSyncedState('titleColor', '#FFFFFF')
   const [widgetSize, setWidgetSize] = useSyncedState<'S' | 'M' | 'L' | 'XL'>('widgetSize', 'M')
   const [darkMode, setDarkMode] = useSyncedState('darkMode', true)
@@ -245,12 +245,6 @@ const App = () => {
   const [addTrigger, setAddTrigger] = useSyncedState('addTrigger', 0)
 
   useEffect(() => {
-    if (!bgImage) {
-      setBgImage(bgImages[Math.floor(Math.random() * bgImages.length)])
-    }
-  })
-
-  useEffect(() => {
     if (!name) {
       if (figma.currentUser) {
         setName(figma.currentUser.name)
@@ -287,7 +281,7 @@ const App = () => {
         blur: 40,
         spread: 0,
       }}
-      fill={bgType === 'color' || !bgImage ? bgColor : { type: 'image', src: bgImage }}
+      fill={bgType === 'color' ? bgColor : { type: 'image', src: bgImage }}
     >
       <Input
         fill={titleColor}
