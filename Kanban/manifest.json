@@ -8,5 +8,5 @@
   "main": "dist/code.js",
   "widgetApi": "1.0.0",
   "documentAccess": "dynamic-page",
-  "networkAccess": { "allowedDomains": ["https://images.unsplash.com"] }
+  "networkAccess": { "allowedDomains": ["https://images.unsplash.com", "images.unsplash.com"] }
 }
